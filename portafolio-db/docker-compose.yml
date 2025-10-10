@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:15
+    container_name: portafolio-db
+    restart: always
+    environment:
+      POSTGRES_DB: portafolio
+      POSTGRES_USER: isaac
+      POSTGRES_PASSWORD: 8hCFS252w^358kVe
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+volumes:
+  data:
+
+
+## password d9882a54-fd0c-4aa0-8543-5553c6771d05
